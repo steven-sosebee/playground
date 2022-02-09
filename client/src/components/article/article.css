@@ -1,0 +1,74 @@
+.scene {
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 200rem;
+  perspective-origin: 50% 50%;
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+}
+
+.project {
+  --shadow-hover: rgba(255, 255, 255, 0.5);
+  --shadow: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  height: 25rem;
+  width: 50rem;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  background: transparent;
+  background-size: cover;
+  overflow: hidden;
+  /* backdrop-filter: blur(0.5rem); */
+  box-shadow: 0.5rem 0 0.5rem var(--shadow), -0.5rem 0 0.5rem var(--shadow),
+    0 -0.5rem 0.5rem var(--shadow), 0 0.5rem 0.5rem var(--shadow);
+
+  transition: 1s ease-in-out;
+}
+.project h2 {
+  margin: 0;
+  padding: 2rem 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7) 90%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.project-reveal {
+  transform: translateY(-10rem);
+  color: rgba(255, 255, 255, 0);
+  transition: 0.5s ease-in;
+}
+.article-icon {
+  position: absolute;
+  transition: 1s ease-in-out;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  right: 0;
+  top: 1rem;
+  right: 0rem;
+
+  /* transform: rotateY(-0.1turn) translateY(1rem) translateZ(0.5rem); */
+  overflow: hidden;
+}
+
+.scene:hover .article-icon {
+  transform: rotateY(0.05turn);
+}
+.scene:hover .project-reveal {
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(0rem);
+}
+.scene:hover .project {
+  box-shadow: 0.5rem 0 0.5rem var(--shadow-hover),
+    -0.5rem 0 0.5rem var(--shadow-hover), 0 -0.5rem 0.5rem var(--shadow-hover),
+    0 0.5rem 0.5rem var(--shadow-hover);
+  transform: rotateY(0turn);
+}
+@keyframes rotation {
+  50% {
+    transform: rotateY(0.05turn);
+    transform: rotateZ(0.05turn);
+  }
+}

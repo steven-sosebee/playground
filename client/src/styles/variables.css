@@ -1,0 +1,12 @@
+html,
+#root {
+  --primary-color: rgb(0, 14, 19, 0.8);
+  --accent-color: rgb(3, 32, 61, 9);
+  --font-color: rgb(216, 216, 252);
+  --bg-color: rgb(35, 44, 44);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}

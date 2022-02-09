@@ -1,0 +1,56 @@
+.sidebar-wrapper {
+  width: 3rem;
+  grid-area: menu;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-expanded,
+.sidebar-collapsed {
+  position: static;
+
+  left: 0;
+
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+
+  z-index: 1;
+  transition: 0.3s ease-in;
+  border-radius: 0 0.5rem 0.5rem 0;
+  overflow: hidden;
+}
+
+#menu-icon {
+  margin: 0.5rem 0 0 1rem;
+  color: blueviolet;
+}
+.sidebar-expanded {
+  width: 9rem;
+}
+
+.sidebar-collapsed {
+  width: 3rem;
+}
+
+.sidebar-text {
+  margin-left: 0.25rem;
+}
+.sidebar-collapsed .sidebar-text {
+  font-size: 0px;
+}
+
+.sidebar-expanded .sidebar-text {
+  font-size: 1rem;
+  transition-delay: 0.2s;
+}
+#menu-icon:hover > bar {
+  background: red;
+  box-shadow: none;
+}
+.sidebar-menu {
+  padding: 0;
+
+  list-style-type: none;
+}
+.sidebar-menu-item {
+  margin: 0 0 0.5rem 1rem;
+  color: var(--font-color);
+}

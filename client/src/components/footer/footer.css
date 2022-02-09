@@ -1,0 +1,42 @@
+.footer {
+  display: block;
+  width: 100vw;
+  color: blue;
+
+  color: var(--font-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  text-align: center;
+  grid-area: footer;
+}
+.footer ul {
+  padding: 0;
+  width: 100%;
+  display: block;
+  margin-inline-start: 0;
+}
+.footer ul li {
+  margin-inline-end: 1rem;
+  display: inline-block;
+}
+
+.footer a,
+.footer a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer li:hover {
+  transform: scale(1.4);
+  color: blue;
+  animation: coolness 2s linear infinite;
+}
+
+@keyframes coolness {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(10rem);
+    /* color: transparent; */
+  }
+}

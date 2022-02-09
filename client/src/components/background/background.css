@@ -1,0 +1,59 @@
+.background {
+  /* grid-area: content; */
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(6, 22, 22);
+  position: fixed;
+  z-index: -1000;
+}
+
+.background div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 90s linear infinite;
+}
+
+.background div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: coolness 10s ease-in-out infinite;
+  animation-delay: calc(0.2s * var(--i));
+  box-shadow: 50vh 20vh 1vh green, 10vh 50vh 1vh green, 50vh 70vh 1vh green,
+    20vh 65vh 1vh green, 50vh 10vh 1vh green, 50vh -70vh 1vh green,
+    40vh 45vh 1vh green;
+}
+
+@keyframes coolness {
+  0% {
+    /* filter: hue-rotate(calc(var(--i) * 0deg)); */
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    /* filter: hue-rotate(calc(var(--i) * 360deg)); */
+  }
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate(calc(var(--i) * 36deg)) translate(30vh);
+  }
+  50% {
+    transform: rotate(calc(var(--i) * 36deg)) translate(30vh) rotate(360deg);
+  }
+}
