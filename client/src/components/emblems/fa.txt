@@ -1,0 +1,8 @@
+      <i className="fa fab fa-css3-alt"></i>
+      <i className="fa fab fa-js"></i>
+      <i className="fa fa-brands fa-html5"></i>
+      <i className="fa fa-solid fa-database"></i>
+      <i className="fa fa-solid fa-object-intersect"></i>
+      <i className="fa fa-brands fa-node-js"></i>
+      <i className="fa fa-brands fa-react"></i>
+      <i className="fa fa-regular fa-leaf"></i>

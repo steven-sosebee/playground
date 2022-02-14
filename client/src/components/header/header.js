@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useThemeContext } from "../../providers/theme/provider_theme";
+
 import "./header.css";
 
 export const Headers = () => {
-  return <div className="header">Sosebius Designs</div>;
+  const { theme, setTheme } = useThemeContext();
+  return <div className={`header ${theme}`}>Sosebius Designs</div>;
 };

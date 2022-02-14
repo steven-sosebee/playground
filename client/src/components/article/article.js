@@ -4,9 +4,12 @@ import "./article.css";
 
 export const Article = (project) => {
   const { name, description, revealText, id, image } = project.project;
-  console.log(image);
+  // console.log([project]);
+  const sceneClass = (id) => {
+    return id % 2 ? "scene left" : "scene right";
+  };
   return (
-    <div className="scene" key={id}>
+    <div className={sceneClass(id)} key={id}>
       <div
         className="project"
         style={{ backgroundImage: "url(" + image + ")" }}

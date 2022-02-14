@@ -4,8 +4,25 @@
   perspective: 200rem;
   perspective-origin: 50% 50%;
   position: relative;
-  width: 30rem;
+  width: max(10rem, 50%);
   height: 30rem;
+  margin: 0 auto;
+  /* transform: rotateY(0.1turn) translateY(1rem); */
+}
+
+.left > .project {
+  /* left: 10%; */
+  /* margin-left: 5rem; */
+  transform: rotateY(0.1turn) translateX(-5rem);
+  /* perspective: 200rem;
+  perspective-origin: 50% 50%; */
+  /* transform-style: preserve-3d; */
+}
+
+.right > .project {
+  /* margin-right: 1rem; */
+  /* right: 10%; */
+  transform: rotateY(-0.1turn) translateX(5rem);
 }
 
 .project {
@@ -20,8 +37,8 @@
   background-size: cover;
   overflow: hidden;
   /* backdrop-filter: blur(0.5rem); */
-  box-shadow: 0.5rem 0 0.5rem var(--shadow), -0.5rem 0 0.5rem var(--shadow),
-    0 -0.5rem 0.5rem var(--shadow), 0 0.5rem 0.5rem var(--shadow);
+  /* box-shadow: 0.5rem 0 0.5rem var(--shadow), -0.5rem 0 0.5rem var(--shadow),
+    0 -0.5rem 0.5rem var(--shadow), 0 0.5rem 0.5rem var(--shadow); */
 
   transition: 1s ease-in-out;
 }
@@ -38,6 +55,7 @@
   transform: translateY(-10rem);
   color: rgba(255, 255, 255, 0);
   transition: 0.5s ease-in;
+  background-color: rgba(5, 5, 5, 0.7);
 }
 .article-icon {
   position: absolute;
@@ -66,9 +84,25 @@
     0 0.5rem 0.5rem var(--shadow-hover);
   transform: rotateY(0turn);
 }
+
 @keyframes rotation {
   50% {
     transform: rotateY(0.05turn);
     transform: rotateZ(0.05turn);
+  }
+}
+
+@media (max-width: 500px) {
+  .scene {
+    width: 100%;
+    margin: 0.5rem 0;
+    left: 0;
+    right: 0;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-reveal {
+    width: 100%;
   }
 }

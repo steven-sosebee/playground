@@ -1,0 +1,54 @@
+.emblem-js {
+  margin: 0.5rem;
+  width: 5rem;
+  background-color: black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.logo-js {
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(0, 0, 0, 0.4) 77%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+}
+.fa {
+  font-size: 2rem;
+}
+.fa-css3-alt {
+  background-color: white;
+  color: skyblue;
+}
+.fa-js {
+  color: orange;
+}
+.fa-html5 {
+  background-color: white;
+  color: red;
+}
+.fa-database {
+  background-color: black;
+  color: purple;
+}
+.fa-server {
+  background-color: black;
+  color: blue;
+}
+.fa-object-intersect {
+  background-color: black;
+  color: yellow;
+}
+.fa-node-js {
+  background-color: black;
+  color: rgb(105, 7, 92);
+}
+.fa-react {
+  background-color: black;
+  color: teal;
+}
+
+.fa-leaf {
+  background-color: black;
+  color: green;
+}

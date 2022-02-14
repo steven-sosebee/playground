@@ -1,18 +1,21 @@
 .sidebar-wrapper {
   width: 3rem;
-  grid-area: menu;
+  height: 100vh;
+  grid-area: header;
   margin: 0;
   padding: 0;
 }
 .sidebar-expanded,
 .sidebar-collapsed {
-  position: static;
-
-  left: 0;
+  grid-area: header;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0px;
 
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 
-  z-index: 1;
+  z-index: 1000;
   transition: 0.3s ease-in;
   border-radius: 0 0.5rem 0.5rem 0;
   overflow: hidden;
@@ -23,13 +26,23 @@
   color: blueviolet;
 }
 .sidebar-expanded {
-  width: 9rem;
+  width: 9.5rem;
+  height: auto;
 }
 
 .sidebar-collapsed {
   width: 3rem;
+  height: 2rem;
 }
-
+.sidebar-collapsed .sidebar-menu {
+  margin: 0;
+  transition: 0.3s ease-in;
+}
+.sidebar-collapsed .sidebar-menu-item {
+  font-size: 0rem;
+  margin: 0px;
+  transition: 0.3s ease-in;
+}
 .sidebar-text {
   margin-left: 0.25rem;
 }
@@ -39,7 +52,7 @@
 
 .sidebar-expanded .sidebar-text {
   font-size: 1rem;
-  transition-delay: 0.2s;
+  /* transition-delay: 0.2s; */
 }
 #menu-icon:hover > bar {
   background: red;
@@ -53,4 +66,9 @@
 .sidebar-menu-item {
   margin: 0 0 0.5rem 1rem;
   color: var(--font-color);
+}
+.sidebar-expanded .toggle-item {
+}
+
+.sidebar-expanded toggle {
 }

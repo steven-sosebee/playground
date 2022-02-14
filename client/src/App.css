@@ -1,26 +1,21 @@
-*,
+/* *,
 *::after,
 *::before {
-  /* transform-style: preserve-3d;
-  backface-visibility: visible; */
-}
+} */
 body {
-  /* background-image: url("./images/ivana-cajina-asuyh-_ZX54-unsplash.jpg"); */
   background-size: cover;
   background-color: rgb(20, 7, 44);
   backdrop-filter: blur(0.5rem);
-  /* filter: blur(0.5rem); */
+  box-sizing: border-box;
 }
 
 .main {
-  /* overflow: hidden; */
-  /* min-height: auto; */
   color: wheat;
   display: grid;
   grid-template-areas:
     "header header"
-    "menu content"
-    "footer footer";
+    "content content"
+    " footer footer";
   grid-template-columns: min-content auto;
   grid-template-rows: min-content auto min-content;
 }

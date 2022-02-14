@@ -1,12 +1,27 @@
 html,
 #root {
-  --primary-color: rgb(0, 14, 19, 0.8);
-  --accent-color: rgb(3, 32, 61, 9);
+  /* --primary-color: rgb(0, 14, 19, 0.8);
+  --accent-color: rgba(40, 50, 61, 0.9);
   --font-color: rgb(216, 216, 252);
-  --bg-color: rgb(35, 44, 44);
+  --bg-color: rgb(35, 44, 44); */
+  --switch-height: 17px;
+  --switch-width: 34px;
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 0;
   margin: 0;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+.dark {
+  --primary-color: rgb(0, 14, 19, 0.8);
+  --accent-color: rgba(55, 64, 73, 0.9);
+  --font-color: rgb(216, 216, 252);
+  --bg-color: rgb(35, 44, 44);
+}
+.light {
+  --primary-color: rgba(185, 185, 185, 0.8);
+  --accent-color: rgba(95, 167, 238, 0.9);
+  --font-color: rgb(22, 22, 22);
+  --bg-color: rgb(2, 99, 99);
 }

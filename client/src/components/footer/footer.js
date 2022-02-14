@@ -1,9 +1,11 @@
 import React from "react";
 import "./footer.css";
+import { useThemeContext } from "../../providers/theme/provider_theme";
 
 export const Footer = () => {
+  const { theme, setTheme } = useThemeContext();
   return (
-    <div className="footer">
+    <div className={`footer ${theme}`}>
       <p>Made by Steven Sosebee ©️ 2022</p>
       <ul>
         <li>
