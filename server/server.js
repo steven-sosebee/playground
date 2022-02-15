@@ -20,7 +20,7 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "prod") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 
   app.get("*", (req, res) => {
@@ -31,15 +31,6 @@ if (process.env.NODE_ENV === "prod") {
     }
   });
 }
-//TODO Get this back-end garbage working :(
-// app.get("/api/search", (req, res) => {
-//   console.log("test")
-//   const APIURL = `https://imdb-api.com/en/API/Search/k_gn6a28pu/inception`;
-//   fetch(APIURL).then((response) => {
-//     const data = res.json();
-//     return data;
-//   });
-// });
 
 db.once("open", () => {
   app.listen(PORT, () => {
