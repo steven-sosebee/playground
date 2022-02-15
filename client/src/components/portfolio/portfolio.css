@@ -2,7 +2,8 @@
   grid-area: content;
   margin: 1rem auto;
   width: 100%;
-  /* display: grid;
-  grid-template-columns: 1fr; */
+  display: grid;
   position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-auto-flow: row dense; */
 }

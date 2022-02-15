@@ -1,9 +1,9 @@
 {
-  "name": "project03-server",
+  "name": "sosebius-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "proxy":"http://localhost:3001",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",

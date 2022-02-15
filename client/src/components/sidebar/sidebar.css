@@ -1,6 +1,6 @@
 .sidebar-wrapper {
-  width: 3rem;
-  height: 100vh;
+  /* width: 3rem; */
+  /* height: 100vh; */
   grid-area: header;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@
 .sidebar-collapsed {
   grid-area: header;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0px;
   left: 0px;
 
@@ -67,8 +67,9 @@
   margin: 0 0 0.5rem 1rem;
   color: var(--font-color);
 }
-.sidebar-expanded .toggle-item {
+.sidebar-collapsed .toggle-item {
+  display: none;
 }
 
-.sidebar-expanded toggle {
+.sidebar-expanded .toggle-item {
 }
