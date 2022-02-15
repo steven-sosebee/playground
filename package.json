@@ -2,6 +2,7 @@
   "name": "sosebius-designs",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://sosebius-designs.herokuapp.com/",
   "dependencies": {},
   "scripts": {
     "start": "node server/server.js",
