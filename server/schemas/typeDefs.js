@@ -1,16 +1,36 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  type Model {
-    name: String
+  type User {
+    username: String
+    email: String
+    phone: String
+    company: String
+  }
+  type Instruction {
+    instruction: String
+  }
+  type Ingredient {
+    quantity: Int
+    ingredient: String
+  }
+  type Recipe {
+    recipeName: String
+    ingredients: [Ingredient]
+    instructions: [Instruction]
   }
 
+  type newRecipe {
+    recipeName: String
+  }
   type Query {
-    query: Model
+    query: User
+    recipes: [Recipe]
   }
-
   type Mutation {
-    mutation(field: String): Model
+    addRecipe(recipeName: String): Recipe
+    addIngredient(recipe: String, quantity: Int, ingredient: String): Ingredient
+    addInstruction(recipe: String!, instruction: String): Instruction
   }
 `;
 

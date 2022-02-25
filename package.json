@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "homepage": "https://sosebius-designs.herokuapp.com/",
+  "proxy": "https://localhost:3001",
   "dependencies": {},
   "scripts": {
     "start": "node server/server.js",

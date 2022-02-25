@@ -10,7 +10,7 @@ body {
 }
 
 .main {
-  color: wheat;
+  /* color: wheat; */
   display: grid;
   grid-template-areas:
     "header header"

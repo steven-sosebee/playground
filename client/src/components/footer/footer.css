@@ -25,7 +25,8 @@
   color: inherit;
 }
 
-.footer li:hover {
+.footer li:hover,
+.footer li:focus-within {
   transform: scale(1.4);
   color: blue;
   animation: coolness 2s linear infinite;

@@ -1,0 +1,14 @@
+.recipe-block {
+  background-color: var(--accent-color);
+  width: 90%;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+}
+.recipe-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.recipe-header span {
+  flex-basis: 3;
+}

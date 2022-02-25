@@ -4,16 +4,16 @@ import { Toggle } from "../toggle/toggle";
 
 import "./sidebar.css";
 export const Sidebar = () => {
-  const [expand, setExpand] = useState(true);
+  const [expand, setExpand] = useState(false);
   const [value, setValue] = useState(true);
   const { theme, setTheme } = useThemeContext();
   console.log(theme);
   const currentTheme = theme ? "dark" : "light";
   const expanded = expand ? "sidebar-expanded" : "sidebar-collapsed";
   const handleExpandMenu = () => {
-    console.log(`initial value: ${expand}`);
+    // console.log(`initial value: ${expand}`);
     setExpand(!expand);
-    console.log(`final value: ${!expand}`);
+    // console.log(`final value: ${!expand}`);
   };
   const handleToggleTheme = () => {
     !value === true ? setTheme("dark") : setTheme("light");

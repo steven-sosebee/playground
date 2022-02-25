@@ -18,28 +18,14 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  ratings: [
-    {
-      imdbID: {
-        type: String,
-        required: true,
-        trim: true,
-      },
-      score: {
-        type: Number,
-        min: 0,
-        max: 80,
-      },
-      image: {
-        type: String,
-        trim: true,
-      },
-      title: {
-        type: String,
-        trim: true,
-      },
-    },
-  ],
+  company: {
+    type: String,
+    trime: true,
+  },
+  phone: {
+    type: String,
+    trime: true,
+  },
 });
 
 userSchema.pre("save", async function (next) {
