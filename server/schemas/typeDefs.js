@@ -1,7 +1,19 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+  input SocialInput {
+    socialName: String!
+    socialLink: String!
+    socialIcon: String
+  }
+  input MenuInput {
+    menuItem: String
+    menuLink: String
+    menuIcon: String
+    menuAuth: String
+  }
   type User {
+    _id: ID
     username: String
     email: String
     phone: String
@@ -15,20 +27,52 @@ const typeDefs = gql`
     ingredient: String
   }
   type Recipe {
+    _id: ID
     recipeName: String
     ingredients: [Ingredient]
     instructions: [Instruction]
   }
-
+  type Social {
+    _id: ID
+    socialName: String!
+    socialLink: String!
+    socialIcon: String
+  }
   type newRecipe {
     recipeName: String
+  }
+  type Menu {
+    _id: ID
+    menuItem: String
+    menuLink: String
+    menuIcon: String
+    menuAuth: String
+  }
+  type Workout {
+    _id: ID
+    workoutTime: String
+    notes: String
+    exercises: [Exercise]
+  }
+  type Exercise {
+    exerciseName: String
+    exerciseType: String
+    exerciseMuscle: String
   }
   type Query {
     query: User
     recipes: [Recipe]
+    socialLinks: [Social]
+    getMenu: [Menu]
+    workouts: [Workout]
   }
   type Mutation {
-    addRecipe(recipeName: String): Recipe
+    addWorkout: Workout
+    addMenuItem(menuItem: MenuInput): Menu
+    addSocial(newSocial: SocialInput): Social
+    deleteSocial(socialId: ID!): Social
+    addRecipe(recipeName: String!): Recipe
+    deleteRecipe(recipeId: ID!): Recipe
     addIngredient(recipe: String, quantity: Int, ingredient: String): Ingredient
     addInstruction(recipe: String!, instruction: String): Instruction
   }

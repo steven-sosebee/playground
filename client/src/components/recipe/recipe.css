@@ -12,3 +12,7 @@
 .recipe-header span {
   flex-basis: 3;
 }
+
+.dragging {
+  background-color: var(--primary-color);
+}

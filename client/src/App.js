@@ -5,7 +5,13 @@ import {
   ThemeProvider,
   useThemeContext,
 } from "./providers/theme/provider_theme";
-
+import {
+  ModalContext,
+  ModalProvider,
+  useModalContext,
+} from "./providers/modal/provider_modal";
+import { Modal } from "./components/modal/modal";
+import { Navigation } from "./components/navigation/navigation";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { Footer } from "./components/footer/footer";
 import { Headers } from "./components/header/header";
@@ -17,6 +23,7 @@ import { Background } from "./components/background/background";
 import { Cookbook } from "./pages/cookbook/cookbook";
 import { JSLogo } from "./components/emblems/javascript/emblem_javascript";
 import "./styles/variables.css";
+import "./styles/buttons.css";
 import React, { useState, useContext } from "react";
 import {
   BrowserRouter as Router,
@@ -54,45 +61,30 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const theme = useContext(ThemeContext);
-  // console.log(useContext(ThemeContext));
-  // console.log(ThemeContext);
-  // console.log(ThemeProvider);
   return (
-    <div>
-      <ApolloProvider client={client}>
-        <Router>
-          <ThemeProvider>
+    <ApolloProvider client={client}>
+      <Router>
+        <ThemeProvider>
+          <ModalProvider>
+            <Modal />
             <div className="main">
               <Sidebar />
+              {/* <Navigation /> */}
               <Headers />
-              <Background />
+              {/* <Background /> */}
               {/* <JSLogo /> */}
               {/* <Toggle /> */}
-
-              <Cookbook />
+              <Routes>
+                <Route path={"/cookbook"} element={<Cookbook />} />
+              </Routes>
+              {/* <Cookbook /> */}
               <Footer />
             </div>
-          </ThemeProvider>
-        </Router>
-      </ApolloProvider>
-    </div>
+          </ModalProvider>
+        </ThemeProvider>
+      </Router>
+    </ApolloProvider>
   );
-  // return (
-  //   <div>
-  //     <Router>
-  //       <div className="main">
-  //         <Sidebar />
-  //         <Headers />
-  //         <Routes>
-  //           <Route path="/" element={<Portfolio />} />
-  //         </Routes>
-  //         {/* <Article /> */}
-  //         <Footer />
-  //       </div>
-  //     </Router>
-  //   </div>
-  // );
 }
 
 export default App;

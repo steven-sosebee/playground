@@ -27,14 +27,3 @@ html,
   --bg-color: rgb(2, 99, 99);
   color: rgb(22, 22, 22);
 }
-
-.btn-edit {
-  border-radius: 15%;
-  background: radial-gradient(top rgba(50, 50, 50, 1), rgba(100, 100, 100, 1));
-  color: antiquewhite;
-}
-.btn-delete {
-  background-color: red;
-  color: aliceblue;
-  border-radius: 15%;
-}

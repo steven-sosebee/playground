@@ -5,6 +5,7 @@ const path = require("path");
 const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
+// const workoutApp = require("./config/workout");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -31,20 +32,24 @@ if (process.env.NODE_ENV === "production") {
     }
   });
 } else {
-  app.use(express.static(path.join(__dirname, "./client/public")));
+  app.use(express.static(path.join(__dirname, "../client/public")));
 
   app.get("*", (req, res) => {
     try {
-      res.sendFile(path.join(__dirname, "./client/public/index.html"));
+      res.sendFile(path.join(__dirname, "../client/public/index.html"));
     } catch (error) {
       console.log(error);
     }
   });
 }
+const workoutApp = db.useDb("workout-app");
+const cookbookApp = db.useDb("cookbook-app");
 
 db.once("open", () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    console.log(`connected to Workout App...${workoutApp.name}`);
+    console.log(`connected to Cookbook App...${cookbookApp.name}`);
   });
 });

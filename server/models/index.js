@@ -1,5 +1,23 @@
-const Users = require("./users");
-const Recipe = require("./recipe");
-const Ingredient = require("./ingredient");
-const Instruction = require("./instruction");
-module.exports = { Users, Recipe, Ingredient, Instruction };
+// const Users = require("./utils/users");
+// const Social = require("./utils/social");
+const { Users, Social, Menu } = require("./utils");
+//cooking app models
+const { Recipe, Ingredient, Instruction } = require("./cooking");
+// workout app models
+const { Workout, Exercise } = require("./workout-app");
+// whiskey app models
+const { Whiskey, CheckIn, Distillery } = require("./whiskey");
+
+module.exports = {
+  Users,
+  Menu,
+  Recipe,
+  Ingredient,
+  Instruction,
+  Social,
+  Whiskey,
+  CheckIn,
+  Distillery,
+  Workout,
+  Exercise,
+};

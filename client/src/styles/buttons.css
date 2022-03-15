@@ -1,0 +1,27 @@
+.btn-edit {
+  border-radius: 15%;
+  background: radial-gradient(top rgba(50, 50, 50, 1), rgba(100, 100, 100, 1));
+  color: antiquewhite;
+}
+.btn-delete {
+  background-color: red;
+  color: aliceblue;
+  border-radius: 15%;
+}
+
+.btn-add {
+  background: linear-gradient(hsla(180, 50%, 25%, 1), hsla(180, 70%, 15%, 1));
+  color: thistle;
+  border-radius: 1rem;
+  width: max-content;
+  padding: 1rem;
+  box-shadow: 0.5rem;
+}
+.btn {
+  transition: 0.1s ease-in;
+  border-radius: 50%;
+}
+.btn:hover {
+  box-shadow: 0.5rem white;
+  transform: scale(1.05);
+}

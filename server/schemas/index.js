@@ -1,4 +1,5 @@
-const typeDefs = require('./typeDefs');
-const resolvers = require('./resolvers');
+const typeDefs = require("./typeDefs");
+const resolvers = require("./resolvers");
+const { workoutTypeDefs, workoutResolvers } = require("./workout-app");
 
-module.exports = { typeDefs, resolvers };
+module.exports = { typeDefs, resolvers, workoutTypeDefs, workoutResolvers };

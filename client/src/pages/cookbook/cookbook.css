@@ -2,3 +2,12 @@
   width: 100%;
   grid-area: content;
 }
+.target {
+  width: 100%;
+  background-color: wheat;
+  color: black;
+}
+.list {
+  background-color: var(--accent-color);
+  padding: 0.5rem;
+}
