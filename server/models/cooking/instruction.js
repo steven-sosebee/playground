@@ -1,4 +1,4 @@
-const { createConnection, Schema, model } = require("mongoose");
+const { Schema, model } = require("mongoose");
 // const cookbookConn = createConnection("mongodb://localhost/cookbook");
 
 const instructionSchema = new Schema({
@@ -8,6 +8,4 @@ const instructionSchema = new Schema({
   },
 });
 
-const Instruction = model("Instruction", instructionSchema);
-
-module.exports = Instruction;
+module.exports = instructionSchema;

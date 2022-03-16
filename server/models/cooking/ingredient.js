@@ -1,5 +1,4 @@
-const { createConnection, Schema, model } = require("mongoose");
-// const cookbookConn = createConnection("mongodb://localhost/cookbook");
+const { Schema, model } = require("mongoose");
 
 const ingredientSchema = new Schema({
   ingredient: {
@@ -12,6 +11,4 @@ const ingredientSchema = new Schema({
   },
 });
 
-const Ingredient = model("Ingredient", ingredientSchema);
-
-module.exports = Ingredient;
+module.exports = ingredientSchema;
