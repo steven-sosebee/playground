@@ -188,6 +188,7 @@ export const Cookbook = () => {
       </div>
       <div
         onDrop={handleDrop}
+        onTouchEnd={handleDrop}
         onDragOver={handleDragOver}
         onDragEnter={handleDragEnter}
         id="recipe-list"
@@ -197,6 +198,7 @@ export const Cookbook = () => {
         {recipeList.map((recipe) => (
           <Recipe
             key={recipe._id}
+            onTouchStart={handleRecipeDrag}
             handleRecipeDrag={handleRecipeDrag}
             handleDragEnter={handleDragEnter}
             handleRecipeDragEnd={handleRecipeDragEnd}
