@@ -50,9 +50,7 @@ const resolvers = {
   Mutation: {
     addWorkout: async (parent) => {
       try {
-        const newWorkout = await Workout.create({
-          workoutTime,
-        });
+        const newWorkout = await Workout.create({});
         return newWorkout;
       } catch (err) {
         console.log(err);

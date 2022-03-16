@@ -1,5 +1,5 @@
 const { createConnection, Schema, model } = require("mongoose");
-const cookbookConn = createConnection("mongodb://localhost/cookbook");
+// const cookbookConn = createConnection("mongodb://localhost/cookbook");
 
 const instructionSchema = new Schema({
   instruction: {
@@ -8,6 +8,6 @@ const instructionSchema = new Schema({
   },
 });
 
-const Instruction = cookbookConn.model("Instruction", instructionSchema);
+const Instruction = model("Instruction", instructionSchema);
 
 module.exports = Instruction;

@@ -7,6 +7,7 @@ const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 // const workoutApp = require("./config/workout");
 
+// console.log(db);
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -21,7 +22,7 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "prod") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 
   app.get("*", (req, res) => {
@@ -42,14 +43,14 @@ if (process.env.NODE_ENV === "production") {
     }
   });
 }
-const workoutApp = db.useDb("workout-app");
-const cookbookApp = db.useDb("cookbook-app");
-
+// const workoutApp = db.useDb("workout-app");
+// const cookbookApp = db.useDb("cookbook-app");
 db.once("open", () => {
+  // console.log("starting db...");
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-    console.log(`connected to Workout App...${workoutApp.name}`);
-    console.log(`connected to Cookbook App...${cookbookApp.name}`);
+    // console.log(`connected to Workout App...${workoutApp.name}`);
+    // console.log(`connected to Cookbook App...${cookbookApp.name}`);
   });
 });

@@ -1,5 +1,5 @@
-const { createConnection } = require("mongoose");
+// const { createConnection } = require("mongoose");
 
-const workoutApp = createConnection("mongodb://localhost/workout-app");
+// const workoutApp = createConnection("mongodb://localhost/workout-app");
 
-module.exports = workoutApp;
+// module.exports = workoutApp;
