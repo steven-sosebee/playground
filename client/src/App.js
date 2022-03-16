@@ -63,26 +63,26 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <ThemeProvider>
-          <ModalProvider>
-            <Modal />
-            <div className="main">
-              <Sidebar />
-              {/* <Navigation /> */}
-              <Headers />
-              {/* <Background /> */}
-              {/* <JSLogo /> */}
-              {/* <Toggle /> */}
-              <Routes>
-                <Route path={"/cookbook"} element={<Cookbook />} />
-              </Routes>
-              {/* <Cookbook /> */}
-              <Footer />
-            </div>
-          </ModalProvider>
-        </ThemeProvider>
-      </Router>
+      {/* <Router> */}
+      <ThemeProvider>
+        <ModalProvider>
+          <Modal />
+          <div className="main">
+            <Sidebar />
+            {/* <Navigation /> */}
+            <Headers />
+            {/* <Background /> */}
+            {/* <JSLogo /> */}
+            {/* <Toggle /> */}
+            {/* <Routes> */}
+            {/* <Route path={"/cookbook"} element={<Cookbook />} /> */}
+            {/* </Routes> */}
+            {/* <Cookbook /> */}
+            <Footer />
+          </div>
+        </ModalProvider>
+      </ThemeProvider>
+      {/* </Router> */}
     </ApolloProvider>
   );
 }
