@@ -4,7 +4,7 @@ const exerciseSchema = require("./exercise");
 // const { createConnection } = require("mongoose");
 
 const workoutApp = createConnection(
-  process.env.WORKOUDB || "mongodb://127.0.0.1/workout-app"
+  process.env.WORKOUTDB || "mongodb://127.0.0.1/workout-app"
 );
 
 // const workoutApp = require("../../config/workout");
