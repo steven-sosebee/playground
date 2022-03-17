@@ -198,7 +198,7 @@ export const Cookbook = () => {
         {recipeList.map((recipe) => (
           <Recipe
             key={recipe._id}
-            onTouchStart={handleRecipeDrag}
+            onTouchMove={handleRecipeDrag}
             handleRecipeDrag={handleRecipeDrag}
             handleDragEnter={handleDragEnter}
             handleRecipeDragEnd={handleRecipeDragEnd}
