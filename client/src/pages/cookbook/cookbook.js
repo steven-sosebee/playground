@@ -18,11 +18,11 @@ export const Cookbook = () => {
   const dragNode = useRef();
   const dragOrigin = useRef();
   const dragDestination = useRef();
-  console.log("Render...");
-  console.log("Menu");
-  console.log(menuList);
-  console.log("Recipes");
-  console.log(recipeList);
+  // console.log("Render...");
+  // console.log("Menu");
+  // console.log(menuList);
+  // console.log("Recipes");
+  // console.log(recipeList);
   useEffect(() => {
     console.log("Effect called...");
     if (data && data.recipes && !loading) {
@@ -30,13 +30,13 @@ export const Cookbook = () => {
       const filteredArray = data.recipes.filter((i) => !menuList.includes(i));
       // set recipe list to filtered data
       setRecipeList(filteredArray);
-      console.log("Recipe list set...");
+      // console.log("Recipe list set...");
       //check if menu item was deleted
       const currentMenu = menuList.filter((i) => data.recipes.includes(i));
       // console.log(currentMenu);
       if (menuList.length > currentMenu.length) {
         setMenuList(currentMenu);
-        console.log("Menu list set...");
+        // console.log("Menu list set...");
       }
     }
   }, [data]);
@@ -57,24 +57,35 @@ export const Cookbook = () => {
 
   // dragging function
   const handleRecipeDrag = (e) => {
-    dragRecipe.current = e.target.id;
+    console.log(e.type);
+    dragRecipe.current =
+      e.type === "touchstart"
+        ? e.targetTouches[0].target.parentNode.id
+        : e.target.id;
+    console.log(dragRecipe.current);
+    // dragNode.current = e.currentTarget;
     dragNode.current = e.currentTarget;
     dragOrigin.current = e.currentTarget.parentNode.id;
-    console.log(`Dragging started from...${dragOrigin.current}`);
+    // console.log(`Dragging started from...${dragOrigin.current}`);
     setDragging(true);
-
-    // console.log(menuList);
-    // console.log(recipeList);
-    // e.effectAllowed = "copyMove";
   };
+  const handleTouch = (e) => {
+    e.type === "touchmove" ? console.log("touch") : console.log("mouse");
+    console.log(`Tag! I'm it:  ${e.targetTouches[0].target.parentNode.id}`);
+    console.log(e);
+  };
+  // console.log(menuList);
+  // console.log(recipeList);
+  // e.effectAllowed = "copyMove";
+
   const handleRecipeDragEnd = (e, params) => {
     // console.log(params);
   };
   // drop function
   const handleDrop = (e) => {
     // e.preventDefault();
-    console.log(`Dropped into...${dragDestination.current}`);
-    console.log(dragRecipe.current);
+    // console.log(`Dropped into...${dragDestination.current}`);
+    // console.log(dragRecipe.current);
     reorderList(dragRecipe.current);
     dragDestination.current = null;
     dragOrigin.current = null;
@@ -96,8 +107,8 @@ export const Cookbook = () => {
     let drag;
     let newRecipeList;
     dragDestination.current = e.currentTarget.id;
-    console.log(`Currently over...${dragDestination.current}`);
-    console.log(params);
+    // console.log(`Currently over...${dragDestination.current}`);
+    // console.log(params);
     dragIndex = recipeList.findIndex(
       (recipe) => recipe._id === dragRecipe.current
     );
@@ -151,12 +162,12 @@ export const Cookbook = () => {
       newRecipeList.splice(recipeToRemove, 1);
       console.log(newRecipeList);
       setRecipeList(newRecipeList);
-      console.log("Recipe list set...");
-      console.log(recipeList);
+      // console.log("Recipe list set...");
+      // console.log(recipeList);
 
       setMenuList(newMenuList);
-      console.log("Menu list set...");
-      console.log(menuList);
+      // console.log("Menu list set...");
+      // console.log(menuList);
     }
     if (
       dragOrigin.current === "menu-list" &&
@@ -171,12 +182,12 @@ export const Cookbook = () => {
       newMenuList.splice(recipeToRemove, 1);
 
       setRecipeList(newRecipeList);
-      console.log("Recipe list set...");
-      console.log(recipeList);
+      // console.log("Recipe list set...");
+      // console.log(recipeList);
 
       setMenuList(newMenuList);
-      console.log("Menu list set...");
-      console.log(menuList);
+      // console.log("Menu list set...");
+      // console.log(menuList);
     }
   };
 
@@ -187,8 +198,8 @@ export const Cookbook = () => {
         Create Recipe
       </div>
       <div
-        onDrop={handleDrop}
-        onTouchEnd={handleDrop}
+        // onDrop={handleDrop}
+        // onTouchEnd={handleDrop}
         onDragOver={handleDragOver}
         onDragEnter={handleDragEnter}
         id="recipe-list"
@@ -198,7 +209,7 @@ export const Cookbook = () => {
         {recipeList.map((recipe) => (
           <Recipe
             key={recipe._id}
-            onTouchMove={handleRecipeDrag}
+            handleTouch={handleTouch}
             handleRecipeDrag={handleRecipeDrag}
             handleDragEnter={handleDragEnter}
             handleRecipeDragEnd={handleRecipeDragEnd}

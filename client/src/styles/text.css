@@ -1,0 +1,13 @@
+#text {
+  width: fit-content;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#text h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 0.15rem solid green;
+  /* letter-spacing: 0.15rem; */
+  animation: typing 3s steps(17, end), cursor 0.75s step-end infinite;
+}

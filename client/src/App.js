@@ -1,5 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
+// react methods and objects
+import React, { useState, useContext } from "react";
+
+// contexts
 import {
   ThemeContext,
   ThemeProvider,
@@ -10,6 +13,8 @@ import {
   ModalProvider,
   useModalContext,
 } from "./providers/modal/provider_modal";
+
+// components and pages
 import { Modal } from "./components/modal/modal";
 import { Navigation } from "./components/navigation/navigation";
 import { Sidebar } from "./components/sidebar/sidebar";
@@ -22,9 +27,16 @@ import { Article } from "./components/article/article";
 import { Background } from "./components/background/background";
 import { Cookbook } from "./pages/cookbook/cookbook";
 import { JSLogo } from "./components/emblems/javascript/emblem_javascript";
+import { Text } from "./components/text/text";
+// style sheets
+
 import "./styles/variables.css";
 import "./styles/buttons.css";
-import React, { useState, useContext } from "react";
+import "./styles/lists.css";
+// import "./styles/animations";
+import "./styles/text.css";
+import "./styles/animations/ani.css";
+// routing and API calls
 import {
   BrowserRouter as Router,
   Route,
@@ -39,6 +51,7 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
+import { ContactPage } from "./pages/contact/contact";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -76,6 +89,8 @@ function App() {
               {/* <Toggle /> */}
               <Routes>
                 <Route path={"/cookbook"} element={<Cookbook />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/test" element={<Text />} />
               </Routes>
               {/* <Cookbook /> */}
               <Footer />

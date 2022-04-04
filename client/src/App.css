@@ -2,20 +2,20 @@
 *::after,
 *::before {
 } */
-body {
+/* body {
   background-size: cover;
   background-color: rgb(20, 7, 44);
   backdrop-filter: blur(0.5rem);
   box-sizing: border-box;
-}
+} */
 
 .main {
   /* color: wheat; */
-  display: grid;
-  grid-template-areas:
+  /* display: grid; */
+  /* grid-template-areas:
     "header header"
     "content content"
     " footer footer";
   grid-template-columns: min-content auto;
-  grid-template-rows: min-content auto min-content;
+  grid-template-rows: min-content auto min-content; */
 }

@@ -20,7 +20,7 @@ export const Footer = () => {
         </li>
         <li>
           <a href="https://www.linkedin.com/in/stevensosebee" target="blank">
-            <i class="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin"></i>
           </a>
         </li>
         <li>

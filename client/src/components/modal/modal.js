@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useThemeContext } from "../../providers/theme/provider_theme";
 import { useModalContext } from "../../providers/modal/provider_modal";
-import { AddRecipe } from "./addRecipe/modal_addRecipe";
+import { AddRecipe, ModalSplash} from "./modal_types/";
 import "./modal.css";
 export const Modal = () => {
   // const [visible, setVisible] = useState(true);
@@ -23,6 +23,12 @@ export const Modal = () => {
         </div>
       </div>
     );
+  }
+
+  if (modal==="splash"){
+    return(<ModalSplash modalstate={handleModal}/>
+
+    )
   }
   // if (modal === "recipe") {
   //   return (

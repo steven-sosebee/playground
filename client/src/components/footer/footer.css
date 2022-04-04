@@ -1,12 +1,17 @@
 .footer {
-  display: block;
+  position: fixed;
+  bottom: 0px;
   width: 100vw;
+  transform-style: preserve-3d;
+  perspective: 100rem;
+  perspective-origin: 50% 50%;
+  text-shadow: 5px 5px 2px red;
   /* color: blue; */
 
   color: var(--font-color);
   background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   text-align: center;
-  grid-area: footer;
+  /* grid-area: footer; */
 }
 .footer ul {
   padding: 0;
@@ -14,9 +19,12 @@
   display: block;
   margin-inline-start: 0;
 }
-.footer ul li {
+.footer li {
   margin-inline-end: 1rem;
+  transition: 0.5s ease-in-out;
   display: inline-block;
+  transform: translateZ(0rem) translateY(0rem);
+  padding: 0.5rem;
 }
 
 .footer a,
@@ -25,19 +33,22 @@
   color: inherit;
 }
 
-.footer li:hover,
-.footer li:focus-within {
-  transform: scale(1.4);
-  color: blue;
-  animation: coolness 2s linear infinite;
-}
+.footer li:hover {
+  /* transform: scale(1.4); */
 
-@keyframes coolness {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg) blur(10rem);
+  /* color: blue; */
+  transform: translateZ(-50rem) translateY(-5rem);
+
+  /* animation: float 2s ease-in; */
+}
+@keyframes float {
+  /* 0% { */
+  /* filter: drop-shadow(); */
+  /* filter: hue-rotate(0deg); */
+  /* } */
+  50% {
+    transform: translateZ(50rem) translateY(-5rem);
+    /* filter: hue-rotate(360deg) blur(10rem); */
     /* color: transparent; */
   }
 }

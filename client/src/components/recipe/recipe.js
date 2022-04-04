@@ -6,6 +6,7 @@ import { Button } from "../button/button";
 import "./recipe.css";
 
 export const Recipe = ({
+  handleTouch,
   handleRecipeDrag,
   handleDragEnter,
   handleRecipeDragEnd,
@@ -34,6 +35,8 @@ export const Recipe = ({
   return (
     <div
       onDragStart={handleRecipeDrag}
+      onTouchStart={handleRecipeDrag}
+      // onTouchMove={handleTouch}
       onDragEnter={(e) => {
         handleDragEnter(e, { recipeId, type: "item" });
       }}
