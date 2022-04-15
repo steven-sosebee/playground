@@ -1,0 +1,17 @@
+#intro {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+#about-me {
+  display: grid;
+}
+
+#logo1 {
+  fill: white;
+  stroke: white;
+}
+#logo2 {
+  fill: white;
+  stroke: #ffff;
+}

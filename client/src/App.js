@@ -26,7 +26,9 @@ import { Portfolio } from "./components/portfolio/portfolio";
 import { Article } from "./components/article/article";
 import { Background } from "./components/background/background";
 import { Cookbook } from "./pages/cookbook/cookbook";
-import { JSLogo } from "./components/emblems/javascript/emblem_javascript";
+import { HomePage } from "./pages/home/home";
+import { ContactPage } from "./pages/contact/contact";
+import { TestingPage } from "./pages/testing/testing";
 import { Text } from "./components/text/text";
 // style sheets
 
@@ -51,7 +53,6 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
-import { ContactPage } from "./pages/contact/contact";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -80,21 +81,17 @@ function App() {
         <ThemeProvider>
           <ModalProvider>
             <Modal />
-            <div className="main">
-              <Sidebar />
-              {/* <Navigation /> */}
-              <Headers />
-              {/* <Background /> */}
-              {/* <JSLogo /> */}
-              {/* <Toggle /> */}
-              <Routes>
-                <Route path={"/cookbook"} element={<Cookbook />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/test" element={<Text />} />
-              </Routes>
-              {/* <Cookbook /> */}
-              <Footer />
-            </div>
+
+            <Sidebar />
+            <Headers />
+            <Routes>
+              <Route exact path="/" element={<HomePage />} />
+              <Route path={"/cookbook"} element={<Cookbook />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/test" element={<TestingPage />} />
+            </Routes>
+            {/* <Cookbook /> */}
+            <Footer />
           </ModalProvider>
         </ThemeProvider>
       </Router>

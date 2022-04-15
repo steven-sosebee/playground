@@ -1,8 +1,10 @@
 .list-plain {
   list-style-type: none;
   display: inline;
+  color: var(--font-color);
 }
 .list-plain li {
+  color: var(--font-color);
   margin: 0.5rem;
   display: inline-block;
   text-decoration: none;

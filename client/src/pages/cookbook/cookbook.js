@@ -198,7 +198,7 @@ export const Cookbook = () => {
         Create Recipe
       </div>
       <div
-        // onDrop={handleDrop}
+        onDrop={handleDrop}
         // onTouchEnd={handleDrop}
         onDragOver={handleDragOver}
         onDragEnter={handleDragEnter}

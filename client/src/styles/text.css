@@ -1,3 +1,10 @@
+.primary-txt {
+  color: var(--font-color);
+
+  text-shadow: 1px 1px 3px var(--primary-color);
+  text-align: center;
+}
+
 #text {
   width: fit-content;
   font-family: monospace;

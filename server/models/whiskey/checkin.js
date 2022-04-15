@@ -5,6 +5,10 @@ const checkInSchema = new Schema({
     type: String,
     trim: true,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 const CheckIn = model("CheckIn", checkInSchema);
