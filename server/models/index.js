@@ -7,7 +7,7 @@ const { Recipe, Ingredient, Instruction } = require("./cooking");
 const { Workout, Exercise } = require("./workout-app");
 // whiskey app models
 const { Whiskey, CheckIn, Distillery } = require("./whiskey");
-
+const { Skill, Project } = require("./resume");
 module.exports = {
   Users,
   Menu,
@@ -20,4 +20,6 @@ module.exports = {
   Distillery,
   Workout,
   Exercise,
+  Project,
+  Skill,
 };

@@ -85,12 +85,7 @@
   transform: rotateY(0turn);
 }
 
-@keyframes rotation {
-  50% {
-    transform: rotateY(0.05turn);
-    transform: rotateZ(0.05turn);
-  }
-}
+
 
 @media (max-width: 500px) {
   .scene {

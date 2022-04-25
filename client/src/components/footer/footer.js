@@ -8,27 +8,27 @@ export const Footer = () => {
     <div className={`footer ${theme}`}>
       <p>Made by Steven Sosebee ©️ 2022</p>
       <ul>
-        <li>
+        <li style={{"--name":"Twitter"}}>
           <a href="https://www.twitter.com" target="blank">
             <i className="fa-brands fa-twitter"></i>
           </a>
         </li>
-        <li>
+        <li style={{"--name":"Github"}}>
           <a href="https://www.github.com/steven-sosebee" target="blank">
             <i className="fa-brands fa-github"></i>
           </a>
         </li>
-        <li>
+        <li style={{"--name":"LinkedIn"}}>
           <a href="https://www.linkedin.com/in/stevensosebee" target="blank">
             <i className="fa-brands fa-linkedin"></i>
           </a>
         </li>
-        <li>
+        <li style={{"--name":"Facebook"}}>
           <a href="https://www.facebook.com/steven.sosebee" target="blank">
             <i className="fa-brands fa-facebook"></i>
           </a>
         </li>
-        <li>
+        <li style={{"--name":"Instagram"}}>
           <a href="https://www.instagram.com" target="blank">
             <i className="fa-brands fa-instagram"></i>
           </a>

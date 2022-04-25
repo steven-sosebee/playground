@@ -53,6 +53,8 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
+import { ResumePage } from "./pages/resume/resume_page";
+import { LoginPage } from "./pages/login/login";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -89,6 +91,8 @@ function App() {
               <Route path={"/cookbook"} element={<Cookbook />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/test" element={<TestingPage />} />
+              <Route path="/resume" element={<ResumePage />} />
+              <Route path="/login" element={<LoginPage />} />
             </Routes>
             {/* <Cookbook /> */}
             <Footer />

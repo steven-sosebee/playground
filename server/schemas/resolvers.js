@@ -5,6 +5,7 @@ const {
   Social,
   Ingredient,
   Menu,
+  Project,
 } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
@@ -133,6 +134,22 @@ const resolvers = {
         return newInstruction;
       } catch (err) {
         console.log(err);
+      }
+    },
+    addProject: async (
+      parent,
+      { projectName, projectTechnologies, projectURL }
+    ) => {
+      try {
+        const newProject = await Project.create({
+          projectName,
+          projectTechnologies,
+          projectURL,
+        });
+        console.log(newProject);
+        return newProject;
+      } catch (err) {
+        return console.log(err);
       }
     },
   },

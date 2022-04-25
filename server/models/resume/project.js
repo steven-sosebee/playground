@@ -5,10 +5,22 @@ const projectSchema = new Schema({
     type: String,
     trim: true,
   },
-  projectType: {
+  projectDescription: {
+    type: String,
+    trim: true,
+  },
+  projectTechnologies: {
+    type: [String],
+    trim: true,
+  },
+  projectURL: {
+    type: String,
+    trim: true,
+  },
+  projectImg: {
     type: String,
     trim: true,
   },
 });
 
-module.export = {};
+module.exports = projectSchema;

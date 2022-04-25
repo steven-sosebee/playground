@@ -52,15 +52,11 @@ export const Recipe = ({
       <div className={`recipe-header ${theme}`}>
         <span>{recipeData.recipeName}</span>
         <div className="commands">
-          <button className="btn btn-edit">...</button>
           <Button
             handleClick={handleRecipeDelete}
             styleClass="btn btn-delete"
             buttonText={"x"}
           />
-          <button onClick={handleRecipeDelete} className="btn btn-delete">
-            X
-          </button>
         </div>
       </div>
       {recipeData.ingredients.map((ingredient, i) => (

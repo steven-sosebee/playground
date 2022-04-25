@@ -9,6 +9,7 @@ html,
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 0;
   margin: 0;
+  max-width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
   background: rgb(44, 44, 44);
@@ -27,6 +28,7 @@ a:active {
   --accent-color: rgba(55, 64, 73, 0.9);
   --font-color: rgb(216, 216, 252);
   --bg-color: rgb(35, 44, 44);
+  --card-color: rgba(206, 206, 206, 1);
   /* color: rgb(216, 216, 252); */
 }
 .light {

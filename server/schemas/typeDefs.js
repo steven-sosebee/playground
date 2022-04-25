@@ -12,6 +12,7 @@ const typeDefs = gql`
     menuIcon: String
     menuAuth: String
   }
+
   type User {
     _id: ID
     username: String
@@ -59,6 +60,20 @@ const typeDefs = gql`
     exerciseType: String
     exerciseMuscle: String
   }
+  type Project {
+    _id: ID
+    projectName: String
+    projectTechnologies: [String]
+    projectURL: String
+  }
+
+  type Skill {
+    Name: String
+    Description: String
+    Type: String
+    Mastery: String
+  }
+
   type Query {
     query: User
     recipes: [Recipe]
@@ -75,6 +90,11 @@ const typeDefs = gql`
     deleteRecipe(recipeId: ID!): Recipe
     addIngredient(recipe: String, quantity: Int, ingredient: String): Ingredient
     addInstruction(recipe: String!, instruction: String): Instruction
+    addProject(
+      projectName: String
+      projectTechnologies: [String]
+      projectURL: String
+    ): Project
   }
 `;
 

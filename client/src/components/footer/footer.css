@@ -5,7 +5,7 @@
   transform-style: preserve-3d;
   perspective: 100rem;
   perspective-origin: 50% 50%;
-  text-shadow: 5px 5px 2px red;
+  text-shadow: 2px 2px 2px var(--accent-color);
   /* color: blue; */
 
   color: var(--font-color);
@@ -21,10 +21,11 @@
 }
 .footer li {
   margin-inline-end: 1rem;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   display: inline-block;
-  transform: translateZ(0rem) translateY(0rem);
   padding: 0.5rem;
+  border-radius:50%;
+  background:transparent;
 }
 
 .footer a,
@@ -34,12 +35,16 @@
 }
 
 .footer li:hover {
-  /* transform: scale(1.4); */
-
+  transform: scale(1.4);
+background:var(--primary-color);
+text-shadow: 5px 2px 2px var(--accent-color);
   /* color: blue; */
-  transform: translateZ(-50rem) translateY(-5rem);
+  
 
   /* animation: float 2s ease-in; */
+}
+.footer li:hover::before {
+  
 }
 @keyframes float {
   /* 0% { */

@@ -37,23 +37,4 @@
     20vh 65vh 0 green, 50vh 10vh 0 green, 50vh -70vh 0 green, 40vh 45vh 0 green;
 }
 
-@keyframes coolness {
-  0% {
-    /* filter: hue-rotate(calc(var(--i) * 0deg)); */
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-    /* filter: hue-rotate(calc(var(--i) * 360deg)); */
-  }
-}
 
-@keyframes rotate {
-  0%,
-  100% {
-    transform: rotate(calc(var(--i) * 36deg)) translate(30vh);
-  }
-  50% {
-    transform: rotate(calc(var(--i) * 36deg)) translate(30vh) rotate(360deg);
-  }
-}

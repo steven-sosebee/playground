@@ -18,7 +18,11 @@ export const Form = ({ formInputs, formButtons, formName }) => {
         </div>
       ))}
       {formButtons.map((button) => (
-        <button key={`${formName}_${button.button}`} className={button.class}>
+        <button
+          key={`${formName}_${button.button}`}
+          className={button.class}
+          onClick={button.function}
+        >
           {button.button}
         </button>
       ))}
