@@ -2,26 +2,18 @@ import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { useThemeContext } from "../../providers/theme/provider_theme";
 import { useModalContext } from "../../providers/modal/provider_modal";
 import { useQuery, useMutation } from "@apollo/client";
-import { ReactComponent as Logo } from "../../images/logo.svg";
-import { ReactComponent as LogoTest } from "../../images/testing.svg";
-import { ReactComponent as Logo4 } from "../../images/logo4.svg";
-import LogoImg from "../../images/base.svg";
 import { images } from "../../images/images";
 import "./home.css";
 
-
-
 export const HomePage = () => {
-  const [counter,setCounter]= useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     // const countInterval = setInterval(()=>{
-      
     //   setCounter(prev=>prev+1)
     // },1000)
-
     // return ()=>clearInterval(countInterval);
-  },[]);
+  }, []);
   const { theme, setTheme } = useThemeContext();
   return (
     <div className={`hero ${theme}`}>
