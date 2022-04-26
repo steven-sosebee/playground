@@ -4,5 +4,5 @@ import { useModalContext } from "../../providers/modal/provider_modal";
 import { useQuery, useMutation } from "@apollo/client";
 
 export const ResumePage = () => {
-  return <div>this is the resume page..</div>;
+  return <div>this is the resume page...</div>;
 };
