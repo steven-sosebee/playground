@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "16.10.0"
+  },
+  "homepage": "https://sosebius-designs.herokuapp.com/",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
