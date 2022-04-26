@@ -4,6 +4,7 @@
   "private": false,
   "proxy": "http://localhost:3001/",
   "PUBLIC_URL": "https://sosebius-designs.herokuapp.com/",
+  "homepage": "https://sosebius-designs.herokuapp.com/",
   "dependencies": {
     "@apollo/client": "^3.5.7",
     "@emotion/react": "^11.7.1",
